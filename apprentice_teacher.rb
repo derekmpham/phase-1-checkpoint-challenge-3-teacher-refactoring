@@ -1,17 +1,12 @@
-require_relative 'student'
+require_relative 'dbc_person'
 
-class ApprenticeTeacher < Student
+class ApprenticeTeacher < DbcPerson
   attr_reader :salary, :target_raise
 
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super(options)
     @target_raise = 800
     @phase = 3
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def set_phase(num)
