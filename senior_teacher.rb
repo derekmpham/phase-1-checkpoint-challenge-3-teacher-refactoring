@@ -1,6 +1,7 @@
-require_relative 'apprentice_teacher'
+require_relative 'dbc_module'
 
-class SeniorTeacher < ApprenticeTeacher
+class SeniorTeacher
+  include DbcMod
   attr_reader :performance_rating
 
   def initialize(options={})

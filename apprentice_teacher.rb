@@ -1,6 +1,7 @@
-require_relative 'dbc_person'
+require_relative 'dbc_module'
 
-class ApprenticeTeacher < DbcPerson
+class ApprenticeTeacher
+  include DbcMod
   attr_reader :salary, :target_raise
 
   def initialize(options={})
